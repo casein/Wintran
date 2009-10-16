@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  
+  <title><%= @pagetitle %></title>
+
+</head>
+<body id="<%= @bodyid %>">
+  <div id="container">
+    <div id="header">
+      <h1>
+        WinTransect
+      </h1>
+      <h2>
+        DATCP
+      </h2>
+
+    </div>
+
+<%= render :partial => "partials/navigation" %>
+
+    <div id="content">
+	    <div id="form_container">
+	      <%= render :partial => "partials/form" %>
+	    </div>
+		<div id="views">
+			<%= yield %>
+		</div>
+    </div>
+
+    <div id="footer">
+      <p>
+      2009 Wisconsin Department of Agriculture, Trade and Consumer Protection
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

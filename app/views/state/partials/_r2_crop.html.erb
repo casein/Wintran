@@ -1,0 +1,23 @@
+<h1>Average Annual Soil Loss by Crop</h1>
+
+<% @calcYear.each do |r| %>
+  <% @results = Season.active.byYear(r).cropR2avg %>
+<table>
+	<thead>
+
+		<tr>
+			<th><%= r %> Crop</th>
+			<th>Average Soil Loss</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @results.each do |t| %>
+		<tr>
+			<td><%= t[0] %></td>
+			<td><%= '%.2f'%t[1] %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<% end %>

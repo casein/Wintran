@@ -1,0 +1,21 @@
+<h1>Percentage of fields with ephemeral erosion</h1>
+<% cache do %>
+<table>
+	<thead>
+		<tr>
+			<th>Year</th>
+			<th>Percentage</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @ecount = Season.active.byYear(@calcYear.reverse[0]).count.to_f %>
+<% @calcYear.each do |r| %>
+  <% @eselect = Season.active.byYear(r).count(:conditions => ['seasonEphemErosion = ?', 1]) %>
+		<tr>
+			<td><%= r %></td>
+			<td><%= '%.3f'%((@eselect/@ecount)*100) + "%" %></td>
+		</tr>
+<% end %>
+	</tbody>
+</table>
+<% end %>

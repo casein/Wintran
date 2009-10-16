@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: MyString
+  transect_id: MyString
+  routestopNumber: MyString
+  routestopValue: 1.5
+  routestopXCoord: MyString
+  routestopYCoord: MyString
+  routestopZCoord: MyString
+
+two:
+  id: MyString
+  transect_id: MyString
+  routestopNumber: MyString
+  routestopValue: 1.5
+  routestopXCoord: MyString
+  routestopYCoord: MyString
+  routestopZCoord: MyString

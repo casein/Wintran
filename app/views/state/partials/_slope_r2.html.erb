@@ -1,0 +1,21 @@
+<h1>Slope greater than 12% by R2 value</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Crop</th>
+			<th>Average Soil Loss</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @calcYear.each do |r| %>
+  <% results = Season.active.slp.byYear(r).r2avg_slope %>
+		<tr>
+			<td><%= r %></td>
+			<td><%= '%.2f'%results %></td>
+		</tr>
+<% end %>
+	</tbody>
+</table>
+<br />
+<br />

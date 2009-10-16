@@ -1,0 +1,22 @@
+<h1>Percentage of fields meeting 'T'</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Year</th>
+			<th>Percentage of fields meeting 'T'</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @calcYear.each do |r| %>
+  <%  @tCount = Season.active.byWatershed(@shedName).byYear(r).tol.count %>
+  <%  @yCount = Season.active.byWatershed(@shedName).byYear(r).count.to_f %>
+		<tr>
+			<td><%= r %></td>
+			<td><%= '%.2f'%((@tCount/@yCount)*100) + '%' %></td>
+		</tr>
+<% end %>
+	</tbody>
+</table>
+<br />
+<br />

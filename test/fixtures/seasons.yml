@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  transect_id: MyString
+  route_stop_id: MyString
+  seasonYear: 1
+  seasonCrop: MyString
+  seasonTillage: MyString
+  seasonContouring: 1
+  seasonFilterstrip: 1
+  seasonEpemErosion: 1
+  seasonResidue: 1.5
+  seasonPFactor: 1.5
+  seasonR2SingleYearSoilLoss: 1.5
+  seasonR2MultiYearSoilLoss: 1.5
+  point: 
+
+two:
+  transect_id: MyString
+  route_stop_id: MyString
+  seasonYear: 1
+  seasonCrop: MyString
+  seasonTillage: MyString
+  seasonContouring: 1
+  seasonFilterstrip: 1
+  seasonEpemErosion: 1
+  seasonResidue: 1.5
+  seasonPFactor: 1.5
+  seasonR2SingleYearSoilLoss: 1.5
+  seasonR2MultiYearSoilLoss: 1.5
+  point: 

@@ -1,0 +1,11 @@
+<%= select_tag(:query,
+options_for_select([
+	['Soil Loss by Crop Type', 'r2_crop'],
+	['Soil Loss by Tillage Type', 'r2_tillage'],
+	['Percentage Ephemeral Erosion', 'ephem'],
+	['Percentage in Tillage Type', 'tillage'],
+	['12% or Greater Slope by Crop Type', 'slope_crop'],
+	['12% or Greater Slope by Tillage Type', 'slope_till'],
+	['Soil Loss on Fields with 12% or Greater Slope', 'slope_r2'],
+	['Percentage of Fields Meeting "T"', 'tolerable']
+	]))%>

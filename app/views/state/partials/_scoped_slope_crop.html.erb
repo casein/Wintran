@@ -1,0 +1,33 @@
+<h1>Slope greater than 12% by crop</h1>
+
+
+<% @year.each do |r| %>
+  <% @crops = Season.active.slp.all(:conditions => ["seasonYear = ?", r], :select => "DISTINCT(seasonCrop)").collect(&:seasonCrop).sort %>
+  <% @getYear = Season.active.byYear(r) %>
+  <% @totalSeasonCount = @getYear.count.to_f %>
+
+<table>
+	<thead>
+		<tr>
+			<th><%= r %> Crop type</th>
+			<th>Number of fields</th>
+			<th>Percentage of like-cropped fields</th>
+			<th>Percentage of total fields</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @crops.each do |crop| %>
+		<% @slpCount = @getYear.slp.byCrop(crop).count %>
+		<% @cropSeasonCount = @getYear.byCrop(crop).count.to_f %>
+		<tr>
+			<td><%= crop %></td>
+			<td><%= @slpCount %></td>
+			<td><%= '%.3f'%((@slpCount/@cropSeasonCount)*100) + "%" %></td>
+			<td><%= '%.3f'%((@slpCount/@totalSeasonCount)*100) + "%" %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<br />
+<% end %>

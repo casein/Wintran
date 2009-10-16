@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: MyString
+  transectRouteName: MyString
+  transectStateNum: 1
+  transectStateName: MyString
+  transectCountyNum: 1
+  transectCountyName: MyString
+  transectCountyAcreage: 1
+  transectGPSUnits: MyString
+  transectGPSCoords: MyString
+  transectNotes: MyString
+  transectYearsInAveR2: 1
+  transectStartYearAveR2: 1
+
+two:
+  id: MyString
+  transectRouteName: MyString
+  transectStateNum: 1
+  transectStateName: MyString
+  transectCountyNum: 1
+  transectCountyName: MyString
+  transectCountyAcreage: 1
+  transectGPSUnits: MyString
+  transectGPSCoords: MyString
+  transectNotes: MyString
+  transectYearsInAveR2: 1
+  transectStartYearAveR2: 1

@@ -1,0 +1,10 @@
+<div id="<%= @bodyid %>" >
+<h1>Wintransect Home</h1>
+<p>Here is a list of the counties stored in the WinTransect database.</p>
+
+<ul>
+<% @counties.each do |c| %>
+	<li><%= c %></li>
+<% end %>
+</ul>
+</div>

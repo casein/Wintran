@@ -1,0 +1,43 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: MyString
+  transect_id: MyString
+  route_stop_id: MyString
+  pointPosition: 1
+  pointActive: 1
+  pointLocDesc: MyString
+  pointXCoord: MyString
+  pointYCoord: MyString
+  pointZCoord: MyString
+  pointSoilSymbol: MyString
+  pointSoilName: MyString
+  pointSlope: 1.5
+  pointSlopeLength: 1.5
+  pointTFactor: 1.5
+  pointKFactor: 1.5
+  pointWatereshedNum: MyString
+  pointWatershedHUCCode: MyString
+  pointWatershedName: MyString
+  pointFieldsize: 1.5
+
+two:
+  id: MyString
+  transect_id: MyString
+  route_stop_id: MyString
+  pointPosition: 1
+  pointActive: 1
+  pointLocDesc: MyString
+  pointXCoord: MyString
+  pointYCoord: MyString
+  pointZCoord: MyString
+  pointSoilSymbol: MyString
+  pointSoilName: MyString
+  pointSlope: 1.5
+  pointSlopeLength: 1.5
+  pointTFactor: 1.5
+  pointKFactor: 1.5
+  pointWatereshedNum: MyString
+  pointWatershedHUCCode: MyString
+  pointWatershedName: MyString
+  pointFieldsize: 1.5

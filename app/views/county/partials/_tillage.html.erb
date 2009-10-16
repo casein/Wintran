@@ -1,0 +1,21 @@
+
+
+<% form_remote_tag :url => { :action => :scoped_query },
+					:update => :scoped_results do %>
+
+<div>
+	<p>Enter a year.<br />
+	For one or more years, enter a comma separate list with no spaces between the values.<br />
+	For all years, type the word ALL
+	
+	</p>
+
+<%= hidden_field_tag :partial_to_load, :scoped_tillage %>
+<%= hidden_field_tag :countyName, @countyName %>
+<%= text_field_tag :year  %>
+<%= submit_tag( "Get results" ) %>
+<% end %>
+</div>
+<div id='scoped_results'>
+	<br />
+</div>

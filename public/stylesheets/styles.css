@@ -1,0 +1,241 @@
+/**************** Body and tag styles ****************/
+
+*{margin:0; padding:0;}
+
+body{
+font:76% Verdana,Tahoma,Arial,sans-serif;
+line-height:1.4em;
+text-align:center;
+color:#303030;
+background:#e8eaec;
+}
+
+h1{
+font-size:1.7em;
+}
+
+a{
+color:#467aa7;
+font-weight:bold;
+text-decoration:none;
+background-color:inherit;
+}
+
+a:hover{
+color:#2a5a8a;
+text-decoration:underline;
+background-color:inherit;
+}
+
+p{padding:0 0 1.6em 0;}
+p form{margin-top:0; margin-bottom:20px;}
+
+table{
+line-height: 1.4em;
+margin:10px 0 0 0;
+border-collapse:collapse;
+border:1px solid;
+}
+
+table caption{
+text-align:left;
+font-weight:bold;
+}
+
+table thead tr th{
+background:#006593;
+color:#ffffff;
+border:1px solid #000000;
+padding:2px 4px 2px 4px;
+}
+
+table tbody tr td{
+border:1px dotted #000000;
+padding:2px 4px 2px 4px;
+}
+
+div#state,
+div#watershed,
+div#county{
+float:right;
+width:70%;
+}
+
+
+/**************** Header and navigation styles ****************/
+
+body#home a#menu-home,
+body#state a#menu-state,
+body#watershed a#menu-watershed,
+body#county a#menu-county{
+background:#ffffff;
+color:#006593;
+}
+
+#container{
+width:760px;
+margin:10px auto;
+padding:1px 0;
+text-align:left;
+background:#ffffff;
+color:#303030;
+border:2px solid #a0a0a0;
+}
+
+#header{
+height:110px;
+width:758px;
+margin:0 1px 1px 1px;
+background:#0092CA;
+background-image: url(/images/bg.png);
+background-repeat: repeat;
+color:#ffffff;
+}
+
+#header h1{
+font:76% Helvetica;
+padding:35px 0 0 20px;
+font-size:2.4em;
+background-color:none;
+color:#ffffff;
+letter-spacing:-2px;
+font-weight:normal;
+}
+
+#header h1 a {
+color: #fff;
+background-color:none;
+}
+
+#header h2{
+margin:10px 0 0 40px;
+font-size:1.4em;
+background-color:none;
+color:#f0f2f4;
+letter-spacing:-1px;
+font-weight:normal;
+}
+
+#navigation{
+height:2.2em;
+line-height:2.2em;
+width:758px;
+margin:0 1px;
+background:#006593;
+color:#ffffff;
+}
+
+#navigation li{
+float:left;
+list-style-type:none;
+border-right:1px solid #ffffff;
+white-space:nowrap;
+}
+
+#navigation li a{
+display:block;
+padding:0 10px;
+font: Helvetica;
+font-size:0.8em;
+font-weight:bold;
+text-transform:uppercase;
+text-decoration:normal;
+background-color:inherit;
+color: #ffffff;
+}
+
+* html #navigation a {width:1%;}
+
+#navigation a:hover{
+background:#c9a100;
+color:#ffffff;
+text-decoration:none;
+}
+
+#logout {
+float:right;
+font-size: 10px;
+padding:0 8px;
+font:Helvetica;
+text-decoration:underline;
+color: #ffffff;
+}
+
+/**************** Content styles ****************/
+
+#content{
+width:730px;
+font-size:0.9em;
+margin: 5px;
+}
+
+#content h2{
+display:block;
+margin:0 0 16px 0;
+font-size:1.7em;
+font-weight:normal;
+letter-spacing:-1px;
+color:#505050;
+background-color:inherit;
+}
+
+#content ul{margin:0 5px 10px 20px;}
+
+	#queries {
+	float:left;
+	border-right:solid 1px #2a5a8a;
+	padding:10px 5px 5px 5px;
+	margin:3px 0 5px 0;
+	}
+
+	#views{
+	float:right;
+	width:70%;
+	padding:10px 5px 5px 5px;
+	}
+	
+	#results{
+	margin:10px 0 5px 0;
+	}
+	
+	#form{
+	float:left;
+	margin:5px;
+	}
+	
+	#submit_button{
+	float:left;
+	clear:both;
+	margin:10px 0 5px 0;
+	}
+	
+	#query{
+	float:left;
+	clear:both;
+	margin:10px 0 5px 0;
+	width:150px;
+	}
+	
+	#region{
+	float:left;
+	clear:both;
+	margin:10px 0 5px 0;
+	width:150px;
+	}
+
+
+/**************** Footer styles ****************/
+
+#footer{
+clear:both;
+width:758px;
+padding:5px 0;
+margin:0 1px;
+font-size:0.9em;
+color:#f0f0f0;
+background:#006593;
+}
+
+#footer p{padding:0; margin:0; text-align:center;}
+#footer a{color:#f0f0f0; background-color:inherit; font-weight:bold;}
+#footer a:hover{color:#ffffff; background-color:inherit; text-decoration: underline;}

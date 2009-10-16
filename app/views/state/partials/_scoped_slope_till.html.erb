@@ -1,0 +1,33 @@
+<h1>Slope greater than 12% by tillage</h1>
+
+
+<% @year.each do |r| %>
+  <% @tillages = Season.active.slp.all(:conditions => ["seasonYear = ?", r], :select => "DISTINCT(seasonTillage)").collect(&:seasonTillage).sort %>
+  <% @getYear = Season.active.byYear(r) %>
+  <% @totalSeasonCount = @getYear.count.to_f %>
+  
+<table>
+	<thead>
+		<tr>
+			<th><%= r %> Tillage type</th>
+			<th>Number of fields</th>
+			<th>Percentage of like-tilled fields</th>
+			<th>Percentage of total fields</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @tillages.each do |till| %>
+		<% @slpCount = @getYear.slp.byTill(till).count %>
+		<% @tillSeasonCount = @getYear.byTill(till).count.to_f %>
+		<tr>
+			<td><%= till %></td>
+			<td><%= @slpCount %></td>
+			<td><%= '%.3f'%((@slpCount/@tillSeasonCount)*100) + "%" %></td>
+			<td><%= '%.3f'%((@slpCount/@totalSeasonCount)*100) + "%" %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<br />
+<% end %>

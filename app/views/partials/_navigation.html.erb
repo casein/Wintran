@@ -1,0 +1,15 @@
+<div>
+	<% if current_user %>
+	<%= link_to "logout", logout_path, :id => "logout" %>
+	<% end %>	
+</div>
+<div id="navigation">
+  <ul>
+    <li><%= link_to 'Home', {:controller => 'pages', :action => 'home'}, :id => "menu-home" %></li>
+    <li><%= link_to 'State', {:controller => 'state', :action => 'index'}, :id => "menu-state" %></li>
+    <li><%= link_to 'County', {:controller => 'county', :action => 'index'}, :id => "menu-county" %></li>
+	<li><%= link_to 'Watershed', {:controller => 'watershed', :action => 'index'}, :id => "menu-watershed" %></li>
+  </ul>
+
+</div>
+

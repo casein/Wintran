@@ -1,0 +1,33 @@
+<h1>Field tillage type by crop</h1>
+<% @totalCount = Season.active.byWatershed(@shedName).byYear(@calcYear.reverse[0]).count.to_f %>
+
+<% @calcYear.each do |r| %>
+  <% @crops = Season.active.byWatershed(@shedName).all(:conditions => ["seasonYear = ?", r], :select => "DISTINCT(seasonCrop)").collect(&:seasonCrop).sort %>
+  <% @getYear = Season.active.byWatershed(@shedName).byYear(r) %>
+  <% @crops.each do |c| %>
+
+<table>
+	<caption><%= r %> <%= c %></caption>
+	<thead>
+		<tr>
+			<th>Tillage type</th>
+			<th>Number of fields</th>
+			<th>Percentage of total fields</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @till = Season.active.byWatershed(@shedName).all(:conditions => ["seasonYear = ? AND seasonCrop = ?", r, c], :select => "DISTINCT(seasonTillage)").collect(&:seasonTillage).sort %>
+		<% @till.each do |t| %>
+		<% @tillCount = @getYear.byCrop(c).byTill(t).count %>
+		<tr>
+			<td><%= t %></td>
+			<td><%= @tillCount %></td>
+			<td><%= '%.3f'%((@tillCount/@totalCount)*100) + "%" %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+  <% end%>
+<br />
+<br />
+<% end %>

@@ -1,0 +1,14 @@
+
+<div id="form">
+<% form_remote_tag :url => { :action => :remote_query },
+					:update => :results do %>
+
+<% if @bodyid != "state" %>
+	<%= render :partial => "partials/region" %>
+<% end %>
+
+<%= render :partial => "partials/queries" %>
+
+<%= submit_tag("Run Query", :id => "submit_button" ) %>
+<% end %>
+</div>
