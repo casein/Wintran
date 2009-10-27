@@ -5,6 +5,7 @@ class UserSessionsController < ApplicationController
 
   def new
     @user_session = UserSession.new
+    @js = "justin.shell@wi.gov"
   end
 
   def create

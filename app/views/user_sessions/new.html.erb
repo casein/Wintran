@@ -2,6 +2,12 @@
 
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
+  <h1>
+	Please Login.
+  </h1>
+  <p>
+	 If you do not have a login, contact <a href="mailto:<%=@js%>">Justin Shell</a>
+  </p>
   <p>
     <%= f.label :username %><br />
     <%= f.text_field :username %>
