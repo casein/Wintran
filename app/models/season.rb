@@ -1,9 +1,7 @@
-  require 'rubygems'
-  require 'composite_primary_keys'
+
   
 
 class Season < ActiveRecord::Base
-  set_primary_keys :point_id, :seasonYear
   belongs_to :point
   belongs_to :transect
   

@@ -60,5 +60,3 @@ config.gem "authlogic"
   # config.active_record.observers = :cacher, :garbage_collector
   
 end
-
-require "composite_primary_keys"
