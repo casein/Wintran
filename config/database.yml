@@ -2,19 +2,19 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: development
-  username: root
-  password: 
+  database: transect_development
+  username: justin.shell
+  password: dqDsLWcHEhwRZ
   socket: /tmp/mysql.sock
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
-  timeout: 5000
-  encoding: utf8
+  adapter: mysql
+  database: 
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  timeout: 5000
+  adapter: mysql
   encoding: utf8
+  database: transect
+  username: justin.shell
+  password: dqDsLWcHEhwRZ
+  socket: /tmp/mysql.sock
