@@ -9,7 +9,7 @@ development:
 
 test:
   adapter: mysql
-  database: 
+  database: transect_test 
 
 production:
   adapter: mysql
