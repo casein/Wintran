@@ -5,7 +5,7 @@ development:
   database: transect_devel
   username: justin.shell
   password: dqDsLWcHEhwRZ
-  phost: molly.soils.wisc.edu
+  host: molly.soils.wisc.edu
   socket: /tmp/mysql.sock
 
 test:
