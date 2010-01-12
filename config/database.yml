@@ -2,9 +2,10 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: transect_development_db
-  username: 
-  password: 
+  database: transect_devel
+  username: justin.shell
+  password: dqDsLWcHEhwRZ
+  host: molly.soils.wisc.edu
   socket: /tmp/mysql.sock
 
 test:

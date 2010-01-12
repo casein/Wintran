@@ -19,6 +19,14 @@ class ApplicationController < ActionController::Base
       @current_user = current_user_session && current_user_session.record
     end
 
+    def require_admin_user
+      unless current_user.username=="datcpAdmin"
+      store_location
+      flash[:notice] = "You must be logged in as an administrator to use view this page."
+      redirect_to :controller => "pages", :action => "home"
+      end
+    end
+
     def require_user
       unless current_user
         store_location
