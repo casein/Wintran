@@ -24,6 +24,11 @@
 <%= render :partial => "partials/navigation" %>
 
     <div id="content">
+
+   <% [:notice].each do |key| %>
+        <%= content_tag :div, flash[key], :id => key if flash[key] %>
+    <% end %>
+
       <%= yield%>
     </div>
 
