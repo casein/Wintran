@@ -58,5 +58,6 @@ config.gem "authlogic"
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
-  
+    
+   # ActionController::AbstractRequest.relative_url_root = "/transect"  
 end
