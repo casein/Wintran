@@ -4,4 +4,4 @@ db/*.sqlite3
 db/data.yml
 config/database.yml
 config/mongrel_cluster.yml
-.gitignore
+config/environments/*
