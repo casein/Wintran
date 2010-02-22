@@ -11,14 +11,16 @@
 	</thead>
 	<tbody>
 <% @calcYear.each do |r| %>
-  <%  @tCount = Season.active.byCounty(@countyName).byYear(r).tol.count %>
-  <%  @yCount = Season.active.byCounty(@countyName).byYear(r).count.to_f %>
+  <%  @tCount = Season.active.byCounty(@countyName).byYear(r).tCount %>
+  <%  @yCount = Season.active.byCounty(@countyName).byYear(r).seasonCount.to_f %>
+<% if @yCount > 500 && r >= 2007 %>
 		<tr>
 			<td><%= r %></td>
 			<td><%= @tCount %></td>
 			<td><%= @yCount %></td>
 			<td><%= '%.2f'%((@tCount/@yCount)*100) + '%' %></td>
 		</tr>
+<% end%>
 <% end %>
 	</tbody>
 </table>

@@ -1,6 +1,6 @@
 class StateController < ApplicationController
 
-  before_filter :require_user
+  before_filter :require_user, :get_counties
   
     def index
       @bodyid = "state"
@@ -77,6 +77,13 @@ def scoped_query
 
   render :partial => @partial_to_load
 end
+
+
+private
+
+  def get_counties
+    @get_selectors = Transect.all(:select => "DISTINCT(transectCountyName)", :order => "transectCountyName ASC").map {|c| [c.transectCountyName]}
+  end
 
 
 end

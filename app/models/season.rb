@@ -48,9 +48,21 @@ class Season < ActiveRecord::Base
             self.average(:seasonR2SingleYearSoilLoss, :conditions => "seasonr2SingleYearSoilLoss > -1.0")
         end
         
-        def tolerate
+        def r2avg
+            self.average(:seasonR2SingleYearSoilLoss, :conditions => "seasonr2SingleYearSoilLoss > -1.0")
+        end
 
-        end   
+        def noTill
+            self.count(:seasonTillage, :conditions => "seasonTillage = 'No Till'")
+        end
+
+	def tCount
+	    self.count(:seasonR2SingleYearSoilLoss, :conditions => ['seasons.seasonR2SingleYearSoilLoss > -1 AND points.pointTFactor >= seasons.seasonR2SingleYearSoilLoss'])
+	end
+
+	def seasonCount
+	    self.count(:seasonR2SingleYearSoilLoss, :conditions => ['seasonR2SingleYearSoilLoss > ?', -1])
+	end
     end
   
 end
