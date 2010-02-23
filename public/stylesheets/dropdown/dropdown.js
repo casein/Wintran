@@ -1,16 +1,3 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
-function noticeFade()
-{
-new Effect.Fade ('notice', { duration: 3.0});
-}
-
-window.onload = noticeFade;
-
-
-
-
 var DDSPEED = 10;
 var DDTIMER = 15;
 
