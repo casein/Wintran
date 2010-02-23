@@ -1,0 +1,30 @@
+
+<h1>Slope greater than 12% by tillage</h1>
+
+
+ <% @ty = Season.active.byYear(2007).slp.all_seasons %>
+ <% @by_season = @ty.group_by {|s| s.seasonYear}%>
+
+<table>
+	<tbody>
+		<% @by_season.each do |y| %>
+		<tr>
+			<td><%= y[0].to_s + "Tillage Type" %></td>
+			<td><%= "Field count" %></td>
+			<td><%= "% total" %></td>
+		</tr>
+		<tr>
+			<% @sumArray = y[1].inject([]) {|result, element| result.push(element.tillSeasonCount.to_i)}.sum %>
+			<% y[1].each do |x| %>
+			<% @tillCount = x.tillSeasonCount.to_f %>
+			<td><%= x.seasonTillage %></td>
+			<td><%= @tillCount %></td>
+			<td><%= '%.3f'%((@tillCount/@sumArray)*100) + "%" %></td>
+			<td><%= @sumArray %></td>
+		</tr>
+			<% end%>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<br />

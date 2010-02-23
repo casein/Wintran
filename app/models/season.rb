@@ -5,6 +5,8 @@ class Season < ActiveRecord::Base
   belongs_to :point
   belongs_to :transect
   
+  named_scope :all_seasons, :select => 'seasonYear, seasonTillage, COUNT(*) as tillSeasonCount, COUNT(*)points.pointSlop >12) as slpCount', :order => 'seasonYear Desc, seasonTillage', :group => 'seasonYear, seasonTillage' 
+
   named_scope :active, :joins => "INNER JOIN points on points.id = seasons.point_id", :conditions => ['points.pointActive = ?', 1]
 
   named_scope :slp, :conditions => ['points.pointSlope = ?', 12]
