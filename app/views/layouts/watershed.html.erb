@@ -26,7 +26,7 @@
     <div id="content">
 
 
-   <% [:notice].each do |key| %>
+   <% [:notice, :log, :warning].each do |key| %>
         <%= content_tag :div, flash[key], :id => key if flash[key] %>
     <% end %>
 

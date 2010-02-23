@@ -147,8 +147,8 @@ color: #ffffff;
 * html #navigation a {width:1%;}
 
 #navigation a:hover{
-background:#c9a100;
-color:#ffffff;
+background: #c9a100;
+color: #ffffff;
 text-decoration:none;
 }
 
@@ -226,14 +226,41 @@ background-color:inherit;
 #notice{
 padding:10px;
 margin:20px 10px;
-border:5px solid #32CD32;
+border:4px solid #32CD32;
 background:#90EE90;
 font-size:1.2em;
 font-weight:bold;
 }
 
 
+#warning{
+padding:10px;
+margin:20px 10px;
+border:4px solid #DC143C;
+background:#FFE4E1;
+font-size:1.2em;
+font-weight:bold;
+}
 
+
+#log{
+padding:10px;
+margin:20px 10px;
+border:4px solid #FFD700;
+background:#F0E68C;
+font-size:1.2em;
+font-weight:bold;
+}
+
+
+#errorExplanation{
+padding:10px;
+margin:20px 10px;
+border:4px solid #DC143C;
+background:#FFE4E1;
+font-size:1em;
+font-weight:normal;
+}
 
 /**************** Footer styles ****************/
 

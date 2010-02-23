@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     def require_admin_user
       unless current_user.username=="datcpAdmin"
       store_location
-      flash[:notice] = "You must be logged in as an administrator to use view this page."
+      flash[:warning] = "You must be logged in as an administrator to use view this page."
       redirect_to :controller => "pages", :action => "home"
       end
     end
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
+        flash[:log] = "You are not currently logged in."
         redirect_to new_user_session_url
         return false
       end
@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
     def require_no_user
       if current_user
         store_location
-        flash[:notice] = "You must be logged out to access this page"
+        flash[:notice] = "You must be logged out to access this page."
         return false
       end
     end
