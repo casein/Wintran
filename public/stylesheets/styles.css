@@ -135,7 +135,7 @@ white-space:nowrap;
 #navigation li a{
 display:block;
 padding:0 10px;
-font: Helvetica, Arial, sans-serif;
+font-family: Helvetica, Arial, sans-serif;
 font-size:0.8em;
 font-weight:bold;
 text-transform:uppercase;
@@ -156,7 +156,7 @@ text-decoration:none;
 float:right;
 font-size: 10px;
 padding:0 8px;
-font:Helvetica, Arial, sans-serif;
+font-family:Helvetica, Arial, sans-serif;
 text-decoration:underline;
 color: #ffffff;
 }
