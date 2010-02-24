@@ -1,13 +1,19 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-function noticeFade()
-{
-new Effect.Fade ('notice', { duration: 3.0});
-}
+//function noticeFade()
+//{
+//new Effect.Fade ('notice', { duration: 3.0});
+//}
 
-window.onload = noticeFade;
+//window.onload = noticeFade;
 
+Event.observe(window, 'load', function(){
+	$A(document.getElementsByClassName('notice')).each(function(o) {
+		o.opacity = 100.0
+		Effect.Fade(o, {duration: 3.0})
+	});
+});
 
 
 
