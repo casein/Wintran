@@ -40,7 +40,11 @@
 	</div>
     <div id="footer">
       <p>
-      &copy; <%= Time.now.year %> WinTransect
+      	<% if Time.now.year == 2009 %>
+			&copy; <%= Time.now.year %> WinTransect
+		<% else %>
+			&copy; 2009-<%= Time.now.year %> WinTransect
+		<% end %>
       </p>
     </div>
   </div>
