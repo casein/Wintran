@@ -4,6 +4,8 @@ class UserSessionsController < ApplicationController
   before_filter :require_user, :only => :destroy
 
   def new
+    @pagetitle = "Wintransect Home"
+    @bodyid = "home"
     @user_session = UserSession.new
     @js = "justin.shell@wi.gov"
   end
