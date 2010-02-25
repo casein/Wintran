@@ -5,7 +5,7 @@
     <li><%= link_to 'County', {:controller => 'county', :action => 'index'}, :id => "menu-county" %></li>
     <li><%= link_to 'Watershed', {:controller => 'watershed', :action => 'index'}, :id => "menu-watershed" %></li>
   <% if current_user %>
-   <li><%= link_to "logout", logout_path %></li>
+    <li><%= link_to "logout", logout_path, :id => "menu-logout" %></li>
   <% end %>	
   </ul>
 
