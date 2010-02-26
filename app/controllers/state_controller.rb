@@ -4,7 +4,8 @@ class StateController < ApplicationController
   
     def index
       @bodyid = "state"
-      @pagetitle = "State level queries"      
+      @pagetitle = "State level queries" 
+      @counties = Transect.all(:select => "DISTINCT(transectCountyName)").collect(&:transectCountyName).sort     
     end
   
     def ephem

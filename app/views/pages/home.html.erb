@@ -1,10 +1,24 @@
-<div id="<%= @bodyid %>" >
-<h1>Wintransect Home</h1>
-<p>Here is a list of the counties stored in the WinTransect database.</p>
+<div id='app_text'>
+<h1>WinDAT Home</h1>
+<h2>WinDAT</h2>
+<p>The WinTransect Data Analysis Tool (WinDAT) is a web-based application used by state and county employees to summarize data collected thorugh the use of the WinTransect Application. It allows users to query data at several different geographic levels. It is important to understand the relative nature of these datasets. To learn more about WinTransect and the process by which these data are collected, please visit the <%= link_to "WinTransect Site", "http://transect.soils.wisc.edu" %></p>
 
+<h2>WinTransect</h2>
+<p>The WinTransect application is a rewrite of the existing DOS-based Transect Survey application historically used by Wisconsin Land Conservation Departments. This application is used for collecting data on agricultural crops, practices and soil loss in individual counties. This data is used for developing statistics and reports at the county and state level. WinTransect was developed through a research agreement between the University of Wisconsin Soils Department and the Wisconsin Association of Land Conservation Employees with grant money from the Wisconsin Department of Agriculture, Trade and Consumer Protection.</p>
+
+<p>Here some useful links related to the WinTransect application:</p>
 <ul>
-<% @counties.each do |c| %>
-	<li><%= c %></li>
-<% end %>
+	<li><%= link_to "WinTransect Homepage", "http://transect.soils.wisc.edu" %></li>
+	<li><%= link_to "WinTransect Quick-Start Manual", "http://transect.soils.wisc.edu/download/WinTransect.QuickStartManual.pdf" %></li>
+	<li><%= link_to "Transect Survey Procedures", "http://transect.soils.wisc.edu/download/Wisconsin%20Transect%20Survey%20Procedures%201999.pdf" %></li>
 </ul>
 </div>
+<div id='counties'>
+	<p>The following counties currently have data stored in the WinDAT application:
+	<ul>
+	<% @counties.each do |c| %>
+		<li><%= c %></li>
+	<% end %>
+	</ul>
+</div>
+

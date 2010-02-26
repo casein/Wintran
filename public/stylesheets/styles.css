@@ -8,10 +8,15 @@ line-height:1.4em;
 text-align:center;
 color:#303030;
 background:#e8eaec;
+/*background:#565d6e;*/
+background-image: url(/images/bg2.jpg);
+background-position:left top;
+background-repeat: repeat-x;*/
 }
 
-h1{
+body h1{
 font-size:1.7em;
+margin:30px 0 10px 0;
 }
 
 a{
@@ -43,7 +48,7 @@ font-weight:bold;
 }
 
 table thead tr th{
-background:#006593;
+background:#2e648c;
 color:#ffffff;
 border:1px solid #000000;
 padding:2px 4px 2px 4px;
@@ -69,7 +74,7 @@ body#state a#menu-state,
 body#watershed a#menu-watershed,
 body#county a#menu-county{
 background:#ffffff;
-color:#006593;
+color:#2e648c;
 }
 
 #container{
@@ -79,16 +84,16 @@ padding:1px 0;
 text-align:left;
 background:#ffffff;
 color:#303030;
-border:2px solid #a0a0a0;
+border:2px solid #a0a0a0; /*6b6c6c*/
 }
 
 #header{
 height:110px;
 width:793px;
 margin:0 1px 1px 1px;
-background:#0092CA;
-background-image: url(/transect/images/bg.png);
-background-repeat: repeat;
+background:#2e648c;
+background-image: url(/images/header_bg.jpg);
+background-repeat: no-repeat;
 color:#ffffff;
 }
 
@@ -121,7 +126,7 @@ height:2.2em;
 line-height:2.2em;
 width:793px;
 margin:0 1px;
-background:#006593;
+background:#2e648c;
 color:#ffffff;
 }
 
@@ -164,22 +169,34 @@ color: #f0f0f0;
 /**************** Content styles ****************/
 
 #content{
-width:730px;
+width:780px;
 font-size:0.9em;
 margin: 5px;
 }
 
 #content h2{
 display:block;
-margin:0 0 16px 0;
-font-size:1.7em;
+margin:0 0 5px 0;
+font-size:1.4em;
 font-weight:normal;
-letter-spacing:-1px;
 color:#505050;
-background-color:inherit;
 }
 
 #content ul{margin:0 5px 10px 20px;}
+
+#counties{
+float:right;
+width:155px;
+padding:20px 10px 5px 2px;
+}
+
+#app_text{
+float:left;
+width:600px;
+border-right:dotted 1px #2a5a8a;
+padding:2px 5px 5px 2px;
+margin-bottom:5px;
+}
 
 	#queries {
 	float:left;
@@ -213,7 +230,7 @@ background-color:inherit;
 	float:left;
 	clear:both;
 	margin:10px 0 5px 0;
-	/*width:150px;*/
+	width:150px;
 	}
 	
 	#region{
@@ -221,6 +238,17 @@ background-color:inherit;
 	clear:both;
 	margin:10px 0 5px 0;
 	width:150px;
+	}
+	
+	#login{
+	float: left;
+	width: 200px;
+	margin: 10px 10px 10px 5px;
+	border-right: 1px dotted #a0a0a0;
+	}
+	
+	#user_session_username, #user_session_password{
+	width: 100px;
 	}
 
 .notice{
@@ -271,7 +299,7 @@ padding:5px 0;
 margin:0 1px;
 font-size:0.9em;
 color:#f0f0f0;
-background:#006593;
+background:#2e648c;
 }
 
 #footer p{

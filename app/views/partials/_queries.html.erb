@@ -1,6 +1,21 @@
 <% if @bodyid == "state" %>
 
-<%= select_tag(:query,
+
+<select id="query" name="query">
+	<option title="Average Annual Soil Loss" value="r2">Average Annual Soil Loss</option>
+	<option title="Percentage Fields in No Till" value="noTill">Percentage Fields in No Till</option>
+	<option title="Soil Loss by Crop Type" value="r2_crop">Soil Loss by Crop Type</option>
+	<option title="Soil Loss by Tillage Type" value="r2_tillage">Soil Loss by Tillage Type</option>
+	<option title="Percentage Ephemeral Erosion" value="ephem">Percentage Ephemeral Erosion</option>
+	<option title="Percentage in Tillage Type" value="tillage">Percentage in Tillage Type</option>
+	<option title="12% or Greater Slope by Crop Type" value="slope_crop">12% or Greater Slope by Crop Type</option>
+	<option title="12% or Greater Slope by Tillage Type" value="slope_till">12% or Greater Slope by Tillage Type</option>
+	<option title="Soil Loss on Fields with 12% or Greater Slope" value="slope_r2">Soil Loss on Fields with 12% or Greater Slope</option>
+	<option title="Percentage of Fields Meeting T" value="tolerable">Percentage of Fields Meeting T</option>
+</select>
+
+
+<%#= select_tag(:query,
 options_for_select([
 	['Average Annual Soil Loss', 'r2'],
 	['Percentage Fields in No Till', 'noTill'],
@@ -16,7 +31,18 @@ options_for_select([
 
 <% else %>
 
-<%= select_tag(:query,
+<select id="query" name="query">
+	<option title="Soil Loss by Crop Type" value="r2_crop">Soil Loss by Crop Type</option>
+	<option title="Soil Loss by Tillage Type" value="r2_tillage">Soil Loss by Tillage Type</option>
+	<option title="Percentage Ephemeral Erosion" value="ephem">Percentage Ephemeral Erosion</option>
+	<option title="Percentage in Tillage Type" value="tillage">Percentage in Tillage Type</option>
+	<option title="12% or Greater Slope by Crop Type" value="slope_crop">12% or Greater Slope by Crop Type</option>
+	<option title="12% or Greater Slope by Tillage Type" value="slope_till">12% or Greater Slope by Tillage Type</option>
+	<option title="Soil Loss on Fields with 12% or Greater Slope" value="slope_r2">Soil Loss on Fields with 12% or Greater Slope</option>
+	<option title="Percentage of Fields Meeting T" value="tolerable">Percentage of Fields Meeting T</option>
+</select>
+
+<%#= select_tag(:query,
 options_for_select([
 	['Soil Loss by Crop Type', 'r2_crop'],
 	['Soil Loss by Tillage Type', 'r2_tillage'],
