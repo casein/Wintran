@@ -2,12 +2,7 @@
 
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
-  <h1>
-	Please Login.
-  </h1>
-  <p>
-	 If you do not have a login, contact <a href="mailto:<%=@js%>">Justin Shell</a>
-  </p>
+<div id='login_form'>
   <p>
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -17,6 +12,17 @@
     <%= f.password_field :password %>
   </p>
   <p><%= f.submit "Submit" %></p>
+</div>
 <% end %>
+
+<div id='login_text'>
+<h1>WinDAT Login</h1>
+
+<p>The WinTransect Data Analysis Tool (WinDAT) is a web-based application used by state and county employees to summarize data collected thorugh the use of the WinTransect Application. It allows users to query data at several different geographic levels.</p>
+
+<p>If you do not have a login, contact <a href="mailto:<%=@js%>">Justin Shell</a></p>
+
+<p>To learn more about WinTransect and the process by which these data are collected, please visit the <%= link_to "WinTransect Site", "http://transect.soils.wisc.edu" %></p>
+</div>
 
 

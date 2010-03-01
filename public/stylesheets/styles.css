@@ -198,6 +198,21 @@ padding:2px 5px 5px 2px;
 margin-bottom:5px;
 }
 
+#login_text{
+float:right;
+width:600px;
+border-left:dotted 1px #2a5a8a;
+padding:2px 5px 5px 10px;
+margin-bottom:5px;
+}
+
+#login_form{
+float:left;
+width:150px;
+padding:2px 5px 5px 2px;
+margin-bottom:5px;
+}
+
 	#queries {
 	float:left;
 	border-right:solid 1px #2a5a8a;
