@@ -1,2 +1,9 @@
+<% @pArray.each do |p| %>
+<%# ll = "[p]" %>
+<% m = GMarker.new(p)%>
+<% @map.overlay_init(m) %>
+<% end %>
 
-    <%= @map.div(:width => 500, :height => 400) %>
+
+
+<%= @map.div(:width => 500, :height => 400) %>
