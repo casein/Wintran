@@ -43,7 +43,7 @@ class CountyController < ApplicationController
 
   def tolerable
     @bodyid = "county"
-    @pagetitle = @pagetitle = "Percetage of fields meeting 'T'"
+    @pagetitle = "Percetage of fields meeting 'T'"
   end
   
   def remote_query
@@ -65,6 +65,19 @@ class CountyController < ApplicationController
     @countyName = params[:countyName]
 
     render :partial => @partial_to_load
+  end
+  
+  def map
+    #page info
+    @pagetitle = "map"
+    @bodyid = "map"
+    #map setup
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true, :map_type => true)
+    @map.center_zoom_init([43.388957,-88.252144],10)
+    #map attributes
+    points = GMarker.new([43.388957,-88.252144], :title => "hello", :info_window => "hola")
+    @map.overlay_init(points)
   end
   
 private

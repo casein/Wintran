@@ -6,10 +6,9 @@
   <%= javascript_include_tag :defaults %>
   
   <title><%= @pagetitle %></title>
-<% if @pagetitle == "map" %>
+
 	<%= GMap.header %>
 	<%= @map.to_html %>
-<% end %>
 
 </head>
 <body id="<%= @bodyid %>">
@@ -28,9 +27,6 @@
     <% end %>
 
 
-	    <div id="form_container">
-	      <%= render :partial => "partials/form" %>
-	    </div>
 		<div id="views">
 			<%= yield %>
 		</div>
