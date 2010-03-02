@@ -4,5 +4,5 @@ class Map < ActiveRecord::Base
   
     named_scope :active, :conditions => ['maps.pointActive = ?', 1]
     
-    named_scope :coordinates, :conditions => ["xCoord > ? AND yCoord > ?", 0, 0]
+    named_scope :coordinates, :conditions => ["pointXCoord > ? AND pointYCoord > ?", 0, 0]
 end
