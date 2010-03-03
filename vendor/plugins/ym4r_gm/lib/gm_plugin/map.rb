@@ -31,7 +31,7 @@ module Ym4r
         options[:hl] ||= ''
         options[:local_search] = false unless options.has_key?(:local_search)
         options[:sensor] = false unless options.has_key?(:sensor)
-        options[:version] ||= "2.x"
+        options[:version] ||= "2"
         api_key = ApiKey.get(options)
         a = "<script src=\"http://maps.google.com/maps?file=api&amp;v=#{options[:version]}&amp;key=#{api_key}&amp;hl=#{options[:hl]}&amp;sensor=#{options[:sensor]}\" type=\"text/javascript\"></script>\n"
         a << "<script src=\"#{ActionController::Base.relative_url_root}/javascripts/ym4r-gm.js\" type=\"text/javascript\"></script>\n" unless options[:without_js]
