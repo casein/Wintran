@@ -1,0 +1,32 @@
+<h1>Average Annual Soil Loss</h1>
+
+<% @year.each do |r| %>
+  <% stateResults = Season.active.byYear(r).r2avg %>
+<table>
+	<thead>
+
+		<tr>
+			<th>Region</th>
+			<th><%= r %> Average Soil Loss</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>State Results</td>
+			<td><%= '%.2f'%stateResults %></td>
+		</tr>
+		<% @get_selectors.each do |c| %>
+			<% countyResults = Season.active.byCounty(c).byYear(r).r2avg %>
+		<tr>
+			<td><%= "  -" + c.to_s + " County" %></td>
+			<% if countyResults.class == BigDecimal %>
+			<td><%= '%.2f'%countyResults %></td>
+			<% else %>
+			<td>NA</td>
+			<% end %>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br />
+<% end %>

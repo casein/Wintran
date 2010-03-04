@@ -1,32 +1,21 @@
-<h1>Average Annual Soil Loss</h1>
 
-<% @calcYear.each do |r| %>
-  <% stateResults = Season.active.byYear(r).r2avg %>
-<table>
-	<thead>
 
-		<tr>
-			<th>Region</th>
-			<th><%= r %> Average Soil Loss</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>State Results</td>
-			<td><%= '%.2f'%stateResults %></td>
-		</tr>
-		<% @get_selectors.each do |c| %>
-			<% countyResults = Season.active.byCounty(c).byYear(r).r2avg %>
-		<tr>
-			<td><%= "  -" + c.to_s + " County" %></td>
-			<% if countyResults.class == BigDecimal %>
-			<td><%= '%.2f'%countyResults %></td>
-			<% else %>
-			<td>NA</td>
-			<% end %>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
-<br />
+<% form_remote_tag :url => { :action => :scoped_query },
+					:update => :scoped_results do %>
+
+<div>
+	<p>Enter a year.<br />
+	For one or more years, enter a comma separate list with no spaces between the values.<br />
+	For all years, type the word ALL
+	
+	</p>
+
+<%= hidden_field_tag :partial_to_load, :scoped_r2 %>
+<%= text_field_tag :year  %>
+<%= submit_tag( "Get Results" ) %>
 <% end %>
+</div>
+<div id='scoped_results'>
+	<br />
+</div>
+
