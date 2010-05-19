@@ -9,9 +9,6 @@ Event.observe(window, 'load', function(){
 	});
 });
 
-
-
-
 Ajax.Responders.register({
   onCreate: function() {
     if($('busy') && Ajax.activeRequestCount>0)

@@ -28,7 +28,8 @@
 	      <%= render :partial => "partials/form" %>
 	    </div>
 	<div id="views">
-<%= yield %>
+		<%= image_tag "load.gif", :id => "busy", :style => "display:none;" %>
+		<%= yield %>
 	</div>
     </div>
 
