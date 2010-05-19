@@ -167,6 +167,9 @@ color: #f0f0f0;
 }
 
 /**************** Content styles ****************/
+#buy{
+display:none;
+}
 
 #content{
 width:780px;
